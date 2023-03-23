@@ -1,15 +1,21 @@
 import "./style.css";
+import "./firebase"
 
-import { setupCounter } from "./counter";
-import typescriptLogo from "./typescript.svg";
+
+
 
 document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
   <div>
+  <!-- The surrounding HTML is left untouched by FirebaseUI.
+     Your app may use that space for branding, controls and other customizations.-->
+<h1>Welcome to My Awesome App</h1>
+<div id="firebaseui-auth-container"></div>
+<div id="loader">Loading...</div>
     <a href="https://vitejs.dev" target="_blank">
       <img src="/vite.svg" class="logo" alt="Vite logo" />
     </a>
     <a href="https://www.typescriptlang.org/" target="_blank">
-      <img src="${typescriptLogo}" class="logo vanilla" alt="TypeScript logo" />
+      <img src="/" class="logo vanilla" alt="TypeScript logo" />
     </a>
     <h1>Hola :D</h1>
     <div class="card">
@@ -21,4 +27,4 @@ document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
   </div>
 `;
 
-setupCounter(document.querySelector<HTMLButtonElement>("#counter")!);
+
