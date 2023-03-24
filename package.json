@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "nodemon src/server/main.ts -w src",
     "start": "NODE_ENV=production ts-node src/server/main.ts",
+    "local": "SET NODE_ENV=development & ts-node src/server/main.ts",
     "build": "vite build"
   },
   "devDependencies": {
